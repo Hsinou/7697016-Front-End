@@ -10,22 +10,22 @@ const pieceElement = document.createElement("article")
 
 
 const nomElement = document.createElement("h2")
-nomElement.innerText=article.nom
+nomElement.innerText=pieces[0].nom
 
 const imgElement=document.createElement("img")
-imgElement.src=article.image
+imgElement.src=pieces[0].image
 
 const prixElement = document.createElement("p")
-prixElement.innerText = `le prix est de ${article.prix} € (${article.prix < 30 ? "€ ":"€€€"})`
+prixElement.innerText = `le prix est de ${pieces[0].prix} € (${pieces[0].prix < 30 ? "€ ":"€€€"})`
 
 const categorieElement = document.createElement("p")
-categorieElement.innerText=article.categorie
+categorieElement.innerText=pieces[0].categorie
 
 const descriptionElement = document.createElement("p")
-descriptionElement.innerText = article.description ?? "il n'y a pas de description pour le moment"
+descriptionElement.innerText = pieces[0].description ?? "il n'y a pas de description pour le moment"
 
 const stockElement = document.createElement("p")
-stockElement.innerText= article.disponibilite ? "en Stock" : "en Rupture de stock"
+stockElement.innerText= pieces[0].disponibilite ? "en Stock" : "en Rupture de stock"
 
 const sectionFiches = document.querySelector(".fiches")
 sectionFiches.apppendChild(pieceElement)
