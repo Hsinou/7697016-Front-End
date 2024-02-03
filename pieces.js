@@ -28,7 +28,7 @@ const stockElement = document.createElement("p")
 stockElement.innerText= article.disponibilite ? "en Stock" : "en Rupture de stock"
 
 const sectionFiches = document.querySelector(".fiches")
-pieceElement.apppendChild(pieceElement)
+sectionFiches.apppendChild(pieceElement)
 pieceElement.appendChild(imgElement)
 pieceElement.appendChild(nomElement)
 pieceElement.appendChild(prixElement)
