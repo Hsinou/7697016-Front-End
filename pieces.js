@@ -6,6 +6,9 @@ const pieces = await reponse.json();
 
 const article = pieces[0]
 
+const pieceElement = document.createElement("article")
+
+
 const nomElement = document.createElement("h2")
 nomElement.innerText=article.nom
 
@@ -25,10 +28,11 @@ const stockElement = document.createElement("p")
 stockElement.innerText= article.disponibilite ? "en Stock" : "en Rupture de stock"
 
 const sectionFiches = document.querySelector(".fiches")
-sectionFiches.appendChild(imgElement)
-sectionFiches.appendChild(nomElement)
-sectionFiches.appendChild(prixElement)
-sectionFiches.appendChild(categorieElement)
-sectionFiches.appendChild(descriptionElement)
-sectionFiches.appendChild(stockElement)
+pieceElement.apppendChild(pieceElement)
+pieceElement.appendChild(imgElement)
+pieceElement.appendChild(nomElement)
+pieceElement.appendChild(prixElement)
+pieceElement.appendChild(categorieElement)
+pieceElement.appendChild(descriptionElement)
+pieceElement.appendChild(stockElement)
 
