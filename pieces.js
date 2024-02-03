@@ -6,33 +6,32 @@ const pieces = await reponse.json();
 
 const article = pieces[0]
 
-const pieceElement = document.createElement("article")
-
-
 const nomElement = document.createElement("h2")
-nomElement.innerText=pieces[0].nom
+nomElement.innerText=article.nom
 
 const imgElement=document.createElement("img")
-imgElement.src=pieces[0].image
+imgElement.src=article.image
 
 const prixElement = document.createElement("p")
-prixElement.innerText = `le prix est de ${pieces[0].prix} € (${pieces[0].prix < 30 ? "€ ":"€€€"})`
+prixElement.innerText = `le prix est de ${article.prix} € (${article.prix < 30 ? "€ ":"€€€"})`
 
 const categorieElement = document.createElement("p")
-categorieElement.innerText=pieces[0].categorie
+categorieElement.innerText=article.categorie
 
 const descriptionElement = document.createElement("p")
-descriptionElement.innerText = pieces[0].description ?? "il n'y a pas de description pour le moment"
+descriptionElement.innerText = article.description ?? "il n'y a pas de description pour le moment"
 
 const stockElement = document.createElement("p")
-stockElement.innerText= pieces[0].disponibilite ? "en Stock" : "en Rupture de stock"
+stockElement.innerText= article.disponibilite ? "en Stock" : "en Rupture de stock"
 
 const sectionFiches = document.querySelector(".fiches")
-sectionFiches.apppendChild(pieceElement)
-pieceElement.appendChild(imgElement)
-pieceElement.appendChild(nomElement)
-pieceElement.appendChild(prixElement)
-pieceElement.appendChild(categorieElement)
-pieceElement.appendChild(descriptionElement)
-pieceElement.appendChild(stockElement)
+
+const elementFiche= document.createElement("article")
+sectionFiches.appendChild(elementFiche)
+elementFiche.appendChild(imgElement)
+elementFiche.appendChild(nomElement)
+elementFiche.appendChild(prixElement)
+elementFiche.appendChild(categorieElement)
+elementFiche.appendChild(descriptionElement)
+elementFiche.appendChild(stockElement)
 
